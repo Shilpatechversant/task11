@@ -1,14 +1,15 @@
 
 <cfscript>
-function myFun(a, b, ...manyMoreArgs) {
-multiplied = [];
-arrayEach(manyMoreArgs, function(e){
-    arrayAppend(multiplied, e * 2);
-});
-writeDump(multiplied);
+function myFun() { 
+var arg_count = ArrayLen(Arguments); 
+var mul =1; 
+var i = 0; 
+for( i = 1 ; i LTE arg_count; i = i + 1 ) 
+{ 
+mul = mul* Arguments[i]; 
+} 
+return mul; 
 }
-myFun(1,2,3,4,5);
-
 </cfscript>
-
-
+<cfset result=myFun(1,2,3,4)>
+<cfdump var="#res#" >
