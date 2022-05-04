@@ -8,8 +8,13 @@ input[type=number] select {
     border-radius: 4px;
     box-sizing: border-box;
   }
-  
-  
+  body{
+    background-color: #91c594;
+  }
+  .main_container
+  {
+    background-color: #beeec1;
+  }
   
   input[type=submit]:hover {
     background-color: #45a049;
